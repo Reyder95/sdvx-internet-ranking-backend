@@ -6,7 +6,7 @@ export interface UserAttributes {
   username: string;
   password: string;
   email: string;
-  display_name: string;
+  display_name: string | null;
 }
 
 export interface UserCreationAttributes extends Optional<UserAttributes, "id"> {}
@@ -16,7 +16,7 @@ class User extends Model<UserAttributes, UserCreationAttributes> implements User
   public username!: string;
   public password!: string;
   public email!: string;
-  public display_name!: string;
+  public display_name!: string | null;
 
   public readonly createdAt!: Date;
   public readonly updatedAt!: Date;
