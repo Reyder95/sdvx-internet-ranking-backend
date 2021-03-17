@@ -43,17 +43,17 @@ Song.init(
     },
 
     length: {
-      type: new DataTypes.INTEGER.UNSIGNED,
+      type: DataTypes.INTEGER.UNSIGNED,
       allowNull: false
     },
 
     bpm_low: {
-      type: new DataTypes.INTEGER.UNSIGNED,
+      type: DataTypes.INTEGER.UNSIGNED,
       allowNull: false
     },
 
     bpm_high: {
-      type: new DataTypes.INTEGER.UNSIGNED,
+      type: DataTypes.INTEGER.UNSIGNED,
       allowNull: true
     } 
   }, {

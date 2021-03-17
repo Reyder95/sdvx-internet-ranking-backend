@@ -1,22 +1,22 @@
 import { DataTypes, Model, Optional } from 'sequelize';
 import sequelize from '../dbinit';
 
-interface ScoreAttributes {
+interface DifficultyAttributes {
   id: number;
-  score: number;
+  level: number;
 }
 
-interface ScoreCreationAttributes extends Optional<ScoreAttributes, "id"> {}
+interface DifficultyCreationAttributes extends Optional<DifficultyAttributes, "id"> {}
 
-class Score extends Model<ScoreAttributes, ScoreCreationAttributes> implements ScoreAttributes {
+class Difficulty extends Model<DifficultyAttributes, DifficultyCreationAttributes> implements DifficultyAttributes {
   public id!: number;
-  public score!: number;
+  public level!: number;
 
   public readonly createdAt!: Date;
   public readonly updatedAt!: Date;
 }
 
-Score.init(
+Difficulty.init(
   {
     id: {
       type: DataTypes.INTEGER.UNSIGNED,
@@ -24,18 +24,17 @@ Score.init(
       primaryKey: true
     },
 
-    score: {
+    level: {
       type: DataTypes.INTEGER.UNSIGNED,
-      allowNull: false,
       validate: {
         min: 0,
-        max: 1000000
+        max: 20
       }
     }
   }, {
-    tableName: 'scores',
+    tableName: 'difficulties',
     sequelize
   }
 )
 
-export default Score;
+export default Difficulty;
