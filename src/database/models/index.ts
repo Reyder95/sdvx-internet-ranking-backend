@@ -8,7 +8,25 @@ import DifficultyName from './DifficultyNames';
 import sequelize from '../dbinit';
 
 const handleDB = () => {
+
+  // Sync the db to add changes when we need it
   sequelize.sync({alter: true});
+
+  // Relationships
+  User.hasMany(Score);
+  Song.hasMany(Score);
+  ClearType.hasMany(Score);
+  GaugeType.hasMany(Score);
+  Song.hasMany(Difficulty);
+  DifficultyName.hasMany(Difficulty);
+
+
+  Score.belongsTo(User);
+  Score.belongsTo(Song);
+  Score.belongsTo(ClearType);
+  Score.belongsTo(GaugeType);
+  Difficulty.belongsTo(Song);
+  Difficulty.belongsTo(DifficultyName);
 }
 
 export { 
