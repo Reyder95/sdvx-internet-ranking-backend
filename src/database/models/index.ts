@@ -4,6 +4,7 @@ import Score from './Scores';
 import GaugeType from './GaugeTypes';
 import ClearType from './ClearTypes';
 import Difficulty from './Difficulties';
+import DifficultyName from './DifficultyNames';
 import sequelize from '../dbinit';
 
 const handleDB = () => {
@@ -17,5 +18,6 @@ export {
   GaugeType,
   ClearType,
   Difficulty,
+  DifficultyName,
   handleDB,
 };
