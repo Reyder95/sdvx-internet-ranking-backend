@@ -1,7 +1,7 @@
 import { DataTypes, Model, Optional }  from 'sequelize';
 import sequelize from '../dbinit';
 
-interface UserAttributes {
+export interface UserAttributes {
   id: number;
   username: string;
   password: string;
@@ -9,7 +9,7 @@ interface UserAttributes {
   display_name: string;
 }
 
-interface UserCreationAttributes extends Optional<UserAttributes, "id"> {}
+export interface UserCreationAttributes extends Optional<UserAttributes, "id"> {}
 
 class User extends Model<UserAttributes, UserCreationAttributes> implements UserAttributes {
   public id!: number;
