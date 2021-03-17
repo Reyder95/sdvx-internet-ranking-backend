@@ -1,6 +1,7 @@
 import User from './Users';
 import Song from './Songs';
 import Score from './Scores';
+import GaugeType from './GaugeTypes';
 import sequelize from '../dbinit';
 
 const handleDB = () => {
@@ -11,5 +12,6 @@ export {
   User, 
   Song,
   Score,
+  GaugeType,
   handleDB,
 };
