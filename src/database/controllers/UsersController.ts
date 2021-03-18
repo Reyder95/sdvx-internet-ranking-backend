@@ -29,7 +29,7 @@ router.get('/:id', (req, res, next) => {
       res.status(404)
       .json({
         message: `User with ID ${req.params.id} wasn't found!`
-      })
+      });
     }
       
     res.status(200)
