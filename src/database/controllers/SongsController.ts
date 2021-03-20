@@ -40,7 +40,7 @@ router.get('/:id', (req, res, next) => {
   });
 });
 
-// Create a user
+// Create a song
 // Requires: { title, artist, length, bpm_low}, bpm_high is optional
 router.post('/', (req, res, next) => {
   Song.create({
@@ -103,7 +103,7 @@ router.put('/:id', (req, res, next) => {
   });
 });
 
-// Deleting a user
+// Deleting a song
 // Requires an ID in the endpoint
 router.delete('/:id', (req, res, next) => {
   Song.findByPk(req.params.id)
