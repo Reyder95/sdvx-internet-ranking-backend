@@ -102,7 +102,7 @@ router.put('/:id', (req, res, next) => {
     .json({
       message: "Successfully updated user!",
       user
-    })
+    });
   })
   .catch(err => {
     next(new Error("Updating a user, error occurred: " + err));
