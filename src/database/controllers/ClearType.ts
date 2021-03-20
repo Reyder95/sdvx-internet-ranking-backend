@@ -1,5 +1,5 @@
 import express from 'express';
-import { ClearType, User } from '../models';
+import { ClearType} from '../models';
 
 const router = express.Router();
 
