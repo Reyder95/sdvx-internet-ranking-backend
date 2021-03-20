@@ -71,7 +71,7 @@ router.put('/:id', (req, res, next) => {
         message: `Difficulty name with ID ${req.params.id} wasn't found!`
       });
 
-    const newName : string = req.body.type ? req.body.type : difficultyname?.name;
+    const newName : string = req.body.name ? req.body.name : difficultyname?.name;
     const newAbbreviation : string = req.body.abbreviation !== undefined ? req.body.abbreviation : difficultyname?.abbreviation;
 
     difficultyname?.update({
