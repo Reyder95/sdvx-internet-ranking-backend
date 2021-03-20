@@ -34,7 +34,7 @@ GaugeType.init(
 
     abbreviation: {
       type: new DataTypes.STRING(5),
-      allowNull: false,
+      allowNull: true,
       unique: true
     }
   }, {

@@ -41,7 +41,7 @@ router.get('/:id', (req, res, next) => {
 });
 
 // Create a clear type
-// Requires: { type, abbreviation }
+// Requires: { type }. abbreviation is optional due to it being nullable
 router.post('/', (req, res, next) => {
   ClearType.create({
     type: req.body.type,
