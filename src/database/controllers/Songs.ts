@@ -80,7 +80,7 @@ router.put('/:id', (req, res, next) => {
     const newArtist : string = req.body.artist ? req.body.artist : song?.artist;
     const newLength : string = req.body.length ? req.body.length : song?.length;
     const newBpmLow : string = req.body.bpm_low ? req.body.bpm_low : song?.bpm_low;
-    const newBpmHigh : string = req.body.bpm_high ? req.body.bpm_high : song?.bpm_high;
+    const newBpmHigh : string = req.body.bpm_high !== undefined ? req.body.bpm_high : song?.bpm_high;
 
     song?.update({
       title: newTitle,

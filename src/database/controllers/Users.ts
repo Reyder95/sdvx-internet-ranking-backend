@@ -87,7 +87,7 @@ router.put('/:id', (req, res, next) => {
     const newUsername : string =  req.body.username ? req.body.username : user?.username;
     const newPassword : string =  req.body.password ? req.body.password : user?.password;
     const newEmail : string    =  req.body.email ? req.body.email : user?.email;
-    const newDisplay : string  =  req.body.display_name ? req.body.display_name : user?.display_name;
+    const newDisplay : string  =  req.body.display_name !== undefined ? req.body.display_name : user?.display_name;
 
     user?.update({
       username: newUsername,
