@@ -14,7 +14,7 @@ const handleDB = () => {
 
   // Relationships
   User.hasMany(Score);
-  Song.hasMany(Score);
+  Difficulty.hasMany(Score);
   ClearType.hasMany(Score);
   GaugeType.hasMany(Score);
   Song.hasMany(Difficulty);
@@ -22,7 +22,7 @@ const handleDB = () => {
 
 
   Score.belongsTo(User);
-  Score.belongsTo(Song);
+  Score.belongsTo(Difficulty);
   Score.belongsTo(ClearType);
   Score.belongsTo(GaugeType);
   Difficulty.belongsTo(Song);
