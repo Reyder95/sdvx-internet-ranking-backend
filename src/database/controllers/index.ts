@@ -1,7 +1,7 @@
 import express from 'express';
 const router = express.Router();
 
-router.use('/users', require('./UsersController'));
-router.use('/songs', require('./SongsController'));
+router.use('/users', require('./Users'));
+router.use('/songs', require('./Songs'));
 
 module.exports = router;
