@@ -71,8 +71,8 @@ router.put('/:id', (req, res, next) => {
         message: `Clear type with ID ${req.params.id} wasn't found!`
       });
 
-    const newType : string = req.body.type ? req.body.type : cleartype?.type;
-    const newAbbreviation : string = req.body.abbreviation ? req.body.abbreviation : cleartype?.abbreviation;
+    const newType : string = req.body.type !== undefined ? req.body.type : cleartype?.type;
+    const newAbbreviation : string = req.body.abbreviation !== undefined ? req.body.abbreviation : cleartype?.abbreviation;
 
     cleartype?.update({
       type: newType,
