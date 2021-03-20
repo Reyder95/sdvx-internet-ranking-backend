@@ -5,7 +5,7 @@ const router = express.Router();
 
 // TODO: Get routes should not show password.
 
-// Get all userss
+// Get all users
 router.get('/', (req, res, next) => {
   User.findAll()
   .then(users => {
